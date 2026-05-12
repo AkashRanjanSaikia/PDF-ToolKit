@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Upload as UploadIcon, Image as ImageIcon, X, Download, Plus } from 'lucide-react';
 import { imagesToPDF } from '../utils/pdfLibUtils';
 import './Tools.css';

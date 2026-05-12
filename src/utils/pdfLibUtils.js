@@ -95,23 +95,7 @@ export const imagesToPDF = async (files) => {
   return await pdfDoc.save();
 };
 
-/**
- * Sets metadata on a PDF.
- * @param {File} file - The PDF File object.
- * @param {Object} metadata - Metadata to set.
- * @returns {Promise<Uint8Array>} - The edited PDF bytes.
- */
-export const setPDFMetadata = async (file, metadata) => {
-  const arrayBuffer = await file.arrayBuffer();
-  const pdfDoc = await PDFDocument.load(arrayBuffer);
-  
-  if (metadata.producer) pdfDoc.setProducer(metadata.producer);
-  if (metadata.subject) pdfDoc.setSubject(metadata.subject);
-  if (metadata.title) pdfDoc.setTitle(metadata.title);
-  if (metadata.author) pdfDoc.setAuthor(metadata.author);
-  
-  return await pdfDoc.save();
-};
+
 
 /**
  * Parses page ranges (e.g., "1, 3, 5-7") into an array of 0-indexed page indices.

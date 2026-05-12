@@ -8,7 +8,7 @@ const Footer = () => {
         <a href="#">Terms of Service</a>
         <a href="#">Contact Us</a>
       </div>
-      <p>&copy; {new Date().getFullYear()} PDF Toolkit. All rights reserved.</p>
+      <p>&copy; {new Date().getFullYear()} PDF-Kit. All rights reserved.</p>
     </footer>
   );
 };
